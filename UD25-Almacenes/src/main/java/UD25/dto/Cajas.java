@@ -15,8 +15,8 @@ public class Cajas {
 	// Atributos caja
 
 	@Id
-	@Column (name= "id")
-	private Long id;
+	@Column (name= "num_ref")
+	private String num_ref;
 	@Column(name = "contenido")
 	private String contenido;
 	@Column(name = "valor")
@@ -34,8 +34,8 @@ public class Cajas {
 
 	// Constructor
 
-	public Cajas(Long id, String contenido, Integer valor, Almacenes almacenes) {
-		this.id = id;
+	public Cajas(String num_ref, String contenido, Integer valor, Almacenes almacenes) {
+		this.num_ref = num_ref;
 		this.contenido = contenido;
 		this.valor = valor;
 		this.almacenes = almacenes;
@@ -44,12 +44,12 @@ public class Cajas {
 
 	// Getters y Setters
 
-	public Long getId() {
-		return id;
+	public String getNum_ref() {
+		return num_ref;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setNum_ref(String num_ref) {
+		this.num_ref = num_ref;
 	}
 
 	public String getContenido() {
@@ -78,7 +78,9 @@ public class Cajas {
 
 	@Override
 	public String toString() {
-		return "Cajas [id=" + id + ", contenido=" + contenido + ", valor=" + valor + ", almacenes=" + almacenes + "]";
+		return "Cajas [num_ref=" + num_ref + ", contenido=" + contenido + ", valor=" + valor + ", almacenes="
+				+ almacenes + "]";
 	}
 
+	
 }

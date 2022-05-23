@@ -44,14 +44,6 @@ public class Almacenes {
 		this.lugar = lugar;
 		this.capacidad = capacidad;
 	}
-	
-
-	public Almacenes(Long id, String lugar, Integer capacidad, List<Cajas> cajas) {
-		this.id = id;
-		this.lugar = lugar;
-		this.capacidad = capacidad;
-		this.cajas = cajas;
-	}
 
 	// Getters & Setters
 

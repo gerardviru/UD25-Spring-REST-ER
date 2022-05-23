@@ -11,11 +11,11 @@ CREATE TABLE almacen (
 );
 
 CREATE TABLE cajas (
-  id int NOT NULL AUTO_INCREMENT,
+  num_ref varchar NOT NULL AUTO_INCREMENT,
   contenido varchar(250) DEFAULT NULL,
   valor int(4) DEFAULT NULL,
   id_almacen int DEFAULT NULL,
-  PRIMARY KEY (id),
+  PRIMARY KEY (num_ref),
   CONSTRAINT almacen_fk FOREIGN KEY (id_almacen) REFERENCES almacen (id)
 );
 

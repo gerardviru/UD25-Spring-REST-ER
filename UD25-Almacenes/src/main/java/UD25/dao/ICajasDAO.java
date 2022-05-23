@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import UD25.dto.Cajas;
 
-public interface ICajasDAO extends JpaRepository<Cajas, Long>{
+public interface ICajasDAO extends JpaRepository<Cajas, String>{
 
 	
 	public List<Cajas> findByContenido(String Contenido);

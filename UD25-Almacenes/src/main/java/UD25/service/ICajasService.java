@@ -13,10 +13,10 @@ public interface ICajasService {
 	
 	public List<Cajas> listarCajasContenido(String Contenido);
 	
-	public Cajas cajas_ID(Long id);
+	public Cajas cajas_ID(String num_ref);
 	
 	public Cajas actualizarCajas(Cajas caja);
 	
-	public void eliminarCajas(Long id);
+	public void eliminarCajas(String num_ref);
 
 }

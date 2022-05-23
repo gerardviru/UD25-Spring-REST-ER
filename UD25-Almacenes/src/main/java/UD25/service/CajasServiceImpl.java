@@ -33,9 +33,9 @@ public class CajasServiceImpl implements ICajasService{
 	}
 	
 	@Override
-	public Cajas cajas_ID(Long id) {
+	public Cajas cajas_ID(String num_ref) {
 		
-		return icajasDAO.getById(id);
+		return icajasDAO.getById(num_ref);
 	}
 
 	@Override
@@ -45,8 +45,8 @@ public class CajasServiceImpl implements ICajasService{
 	}
 
 	@Override
-	public void eliminarCajas(Long id) {
-		icajasDAO.deleteById(id);
+	public void eliminarCajas(String num_ref) {
+		icajasDAO.deleteById(num_ref);
 		
 	}
 
