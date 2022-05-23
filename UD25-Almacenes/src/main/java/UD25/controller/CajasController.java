@@ -35,21 +35,19 @@ public class CajasController {
 		return cajasServiceImpl.guardarCajas(cajas);
 	}
 	
+	
+	@GetMapping("/cajas/{num_ref}")
+	public Cajas cajas_ID (@PathVariable(name="num_ref") String num_ref) {
+		
+		
+		return cajasServiceImpl.cajas_ID(num_ref);
+
+	}
+	
 	@GetMapping("/cajas/contenido/{contenido}")
 	public List<Cajas> listarCajasContenido(@PathVariable(name="contenido")String Contenido){
 		
 		return cajasServiceImpl.listarCajasContenido(Contenido);
-	}
-	
-	@GetMapping("/cajas/{id}")
-	public Cajas cajas_ID (@PathVariable(name="num_ref") String num_ref) {
-		
-		Cajas cajas = new Cajas();
-		cajas = cajasServiceImpl.cajas_ID(num_ref);
-		
-		System.out.println("Cajas ID:" + cajas);
-		
-		return cajas;
 	}
 		
 	@PutMapping("/cajas/{id}")
@@ -61,10 +59,9 @@ public class CajasController {
 		caj_seleccionado= cajasServiceImpl.cajas_ID(num_ref);
 			
 		caj_seleccionado.setContenido(caja.getContenido());
+		caj_seleccionado.setValor(caja.getValor());
 			
 		caj_actualizado = cajasServiceImpl.actualizarCajas(caj_seleccionado);
-			
-		System.out.println("El almacen actualizado es: "+ caj_actualizado);
 			
 		return caj_actualizado;
 		}

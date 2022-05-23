@@ -35,7 +35,7 @@ public class CajasServiceImpl implements ICajasService{
 	@Override
 	public Cajas cajas_ID(String num_ref) {
 		
-		return icajasDAO.getById(num_ref);
+		return icajasDAO.findById(num_ref).get();
 	}
 
 	@Override

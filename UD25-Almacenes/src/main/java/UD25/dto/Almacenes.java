@@ -30,7 +30,7 @@ public class Almacenes {
 	private Integer capacidad;
 
 	@OneToMany
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id_almacen")
 	private List<Cajas> cajas;
 
 	// Constructor Default

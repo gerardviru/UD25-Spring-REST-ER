@@ -28,7 +28,6 @@ public class AlmacenesController {
 		return almacenesServiceImpl.listarAlmacenes();
 	}
 	
-	
 	@PostMapping("/almacenes")
 	public Almacenes guardarAlmacenes(@RequestBody Almacenes almacenes) {
 		
@@ -44,12 +43,8 @@ public class AlmacenesController {
 	@GetMapping("/almacenes/{id}")
 	public Almacenes almacenes_ID (@PathVariable(name="id") Long id) {
 		
-		Almacenes almacenes = new Almacenes();
-		almacenes = almacenesServiceImpl.almacenes_ID(id);
+		return almacenesServiceImpl.almacenes_ID(id);
 		
-		System.out.println("Almacen ID:" + almacenes);
-		
-		return almacenes;
 	}
 		
 	@PutMapping("/almacenes/{id}")
@@ -63,8 +58,6 @@ public class AlmacenesController {
 		alm_seleccionado.setLugar(almacenes.getLugar());
 			
 		alm_actualizado = almacenesServiceImpl.actualizarAlmacenes(alm_seleccionado);
-			
-		System.out.println("El almacen actualizado es: "+ alm_actualizado);
 			
 		return alm_actualizado;
 		}

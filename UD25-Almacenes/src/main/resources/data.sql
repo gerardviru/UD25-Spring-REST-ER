@@ -11,7 +11,7 @@ CREATE TABLE almacen (
 );
 
 CREATE TABLE cajas (
-  num_ref varchar NOT NULL AUTO_INCREMENT,
+  num_ref varchar(250) NOT NULL AUTO_INCREMENT,
   contenido varchar(250) DEFAULT NULL,
   valor int(4) DEFAULT NULL,
   id_almacen int DEFAULT NULL,

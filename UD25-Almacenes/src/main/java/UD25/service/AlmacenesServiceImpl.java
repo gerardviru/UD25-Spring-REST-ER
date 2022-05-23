@@ -35,7 +35,7 @@ public class AlmacenesServiceImpl implements IAlmacenesService{
 	@Override
 	public Almacenes almacenes_ID(Long id) {
 		
-		return ialmacenesDAO.getById(id);
+		return ialmacenesDAO.findById(id).get();
 	}
 
 	@Override

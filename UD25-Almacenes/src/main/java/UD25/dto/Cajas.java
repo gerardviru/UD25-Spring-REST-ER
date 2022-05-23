@@ -17,8 +17,10 @@ public class Cajas {
 	@Id
 	@Column (name= "num_ref")
 	private String num_ref;
+	
 	@Column(name = "contenido")
 	private String contenido;
+	
 	@Column(name = "valor")
 	private Integer valor;
 
@@ -34,11 +36,10 @@ public class Cajas {
 
 	// Constructor
 
-	public Cajas(String num_ref, String contenido, Integer valor, Almacenes almacenes) {
+	public Cajas(String num_ref, String contenido, Integer valor) {
 		this.num_ref = num_ref;
 		this.contenido = contenido;
 		this.valor = valor;
-		this.almacenes = almacenes;
 
 	}
 
